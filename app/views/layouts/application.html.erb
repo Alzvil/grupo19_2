@@ -1,15 +1,8 @@
 <!DOCTYPE html>
-
-<% if current_user %>
-  <%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete %>
-<% else %>
-  <% link_to "Iniciar Sesión", new_user_session_path %>
-  <% link_to "Registrarme", new_user_registration_path %>
-<% end %>
-
+ 
 <html>
-  <head>
-    <title>Prueba</title>
+  <head align='left'>
+    <title>Grupo 19</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -17,9 +10,18 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body align='center'>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+
+    <% if current_user %>
+      <p>Bienvenido! <%= current_user.username %></p>
+      <%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete %>
+    <% else %>
+      <% link_to "Iniciar Sesión", new_user_session_path %>
+      <% link_to "Registrarme", new_user_registration_path %>
+    <% end %>
+
+    <%= yield %>
   </body>
 </html>
