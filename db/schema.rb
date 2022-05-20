@@ -10,24 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_19_030119) do
+ActiveRecord::Schema.define(version: 2022_05_16_170019) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "turnos", force: :cascade do |t|
-    t.string "descripcion"
-    t.integer "numero_turno"
-    t.string "direccion_salida"
-    t.string "destino"
-    t.integer "numero_personas"
-    t.string "fecha"
-    t.string "hora"
-    t.string "tipo"
-    t.integer "vacantes_libres"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
