@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  descripcion: MyString
+  numero_turno: 1
+  direccion_salida: MyString
+  destino: MyString
+  numero_personas: 1
+  fecha_salida: 2022-05-19
+  hora_salida: 2022-05-19 21:48:56
+  tipo: MyString
+  vacantes_libres: 1
+
+two:
+  descripcion: MyString
+  numero_turno: 1
+  direccion_salida: MyString
+  destino: MyString
+  numero_personas: 1
+  fecha_salida: 2022-05-19
+  hora_salida: 2022-05-19 21:48:56
+  tipo: MyString
+  vacantes_libres: 1

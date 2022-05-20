@@ -1,0 +1,62 @@
+<%= form_with(model: turno, local: true) do |form| %>
+  <% if turno.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(turno.errors.count, "error") %> prohibited this turno from being saved:</h2>
+
+      <ul>
+        <% turno.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :descripcion %>
+    <%= form.text_field :descripcion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :numero_turno %>
+    <%= form.number_field :numero_turno %>
+  </div>
+
+  <div class="field">
+    <%= form.label :direccion_salida %>
+    <%= form.text_field :direccion_salida %>
+  </div>
+
+  <div class="field">
+    <%= form.label :destino %>
+    <%= form.text_field :destino %>
+  </div>
+
+  <div class="field">
+    <%= form.label :numero_personas %>
+    <%= form.number_field :numero_personas %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha_salida %>
+    <%= form.date_select :fecha_salida %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hora_salida %>
+    <%= form.time_select :hora_salida %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tipo %>
+    <%= form.text_field :tipo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vacantes_libres %>
+    <%= form.number_field :vacantes_libres %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @turno.descripcion %>
+</p>
+
+<p>
+  <strong>Numero turno:</strong>
+  <%= @turno.numero_turno %>
+</p>
+
+<p>
+  <strong>Direccion salida:</strong>
+  <%= @turno.direccion_salida %>
+</p>
+
+<p>
+  <strong>Destino:</strong>
+  <%= @turno.destino %>
+</p>
+
+<p>
+  <strong>Numero personas:</strong>
+  <%= @turno.numero_personas %>
+</p>
+
+<p>
+  <strong>Fecha salida:</strong>
+  <%= @turno.fecha_salida %>
+</p>
+
+<p>
+  <strong>Hora salida:</strong>
+  <%= @turno.hora_salida %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @turno.tipo %>
+</p>
+
+<p>
+  <strong>Vacantes libres:</strong>
+  <%= @turno.vacantes_libres %>
+</p>
+
+<%= link_to 'Edit', edit_turno_path(@turno) %> |
+<%= link_to 'Back', turnos_path %>
